@@ -1,3 +1,9 @@
+newImage('assets/grass.png',100, 100,)
+
+for(i=0; i<=4;){
+  newImage('assets/sky.png',100 + i, 800+ i,)
+  i++
+}
 function newImage(root, left, bottom){
     let thing = document.createElement('img')
     thing.src = root
@@ -21,25 +27,17 @@ newImage('assets/crate.png', 150, 200)
 newImage('assets/well.png', 500, 425)
 
 function newItem(x,y,z){
-   let thing = newImage(x,y,z)
-    thing.addEventListener('click', function(){
-        thing.remove()
+   let item = newImage(x,y,z)
+    item.addEventListener('dblclick', function(){
+        item.remove()
     })
 }
 
 newItem('assets/sword.png', 500, 405)
+newItem('assets/sheild.png', 165, 185)
+newItem('assets/staff.png', 600, 100)
 
-// let sword = document.createElement('img')
-// sword.src = 'assets/sword.png'
-// sword.position = 'fixed'
-// sword.left = 500px
-// sword.bottom = 405px
-// document.body.append(sword)
-
-// sword.addEventListener('click', function(){
-//     sword.remove()
-// })
-
-
+console.log(window.innerHeight) 
+console.log(window.innerWidth) 
 
 
